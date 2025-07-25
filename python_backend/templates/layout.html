@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pyhton Django</title>
+    <title>
+        {% block title %}
+        Default value
+        {% endblock %}
+    </title>
     <link rel="stylesheet" href="{% static 'home.css' %}">
 </head>
 <body>
-    <h1>Home Page</h1>
-    <h2>This is a Django project!!</h2>
-    <h3>I am learning python on the go!</h3>
+    <nav>This is our navigation bar </nav>
+    {% block content %}{% endblock %}
 </body>
 </html>
