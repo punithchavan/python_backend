@@ -10,3 +10,7 @@ def home(request):
 def desc(request, chai_id):
     chai = get_object_or_404(ChaiVarity, pk=chai_id)
     return render(request, 'backend/description.html', {'chai': chai})
+
+def prices(request, chai_id):
+    price = get_object_or_404(ChaiVarity, pk=chai_id)
+    return render(request, 'backend/prices.html', {'price': price})
